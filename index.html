@@ -60,19 +60,36 @@
 				</ul>
 				</div>
 			</article>			
-			<article class="">
+			<article>
 				<div class="container">
 				<h3 class = "title">생산 제품</h3>
 				<p class="sub-title">2023년 신제품, 지능형 <strong>텔레모스 시스템!</strong></p>
-				<div class="new-item">
+				<div class="new-item pos-relative">
 					<img alt="2023신제품" src="images/product.png">
-					<button type="button" class="rounded-rect">자세히보기</button>
-					<script>
-						//.rounded-rect or #detail버튼 클릭시 팝업으로 창을 출력한다. 
-					</script>
+					<button type="button" class="rounded-rect" id="detail">자세히보기</button>
+					<div class="item-detail pos-absolute">
+						<span id="close" class="pos-absolute">닫기</span>
+						<div class="detail-content">
+							<div class="img-detail">
+								<div class="big-img"></div>
+									<img src="https://picsum.photos/id/2/300" alt="picsum">
+								<ul class="small-img">
+									<li><img src="https://picsum.photos/id/1/100" alt="picsum"></li>
+									<li><img src="https://picsum.photos/id/10/100" alt="picsum"></li>
+									<li><img src="https://picsum.photos/id/100/100" alt="picsum"></li>
+								</ul>
+							</div>
+							<div class="text-detail">
+								<ul>
+									<li>제품명 : 지능형 텔레모스 시스템</li>
+									<li>출시일 : 2022.09.22</li>
+									<li> .....</li>
+								</ul>
+							</div>
+						</div>
+					</div>
 				</div>
 				<!-- /.new-item -->
-				
 				<!-- <div class="carousel">  -->
 <!-- 				<div class="carousel"> -->
 <!-- 					<div class="prev"> -->
