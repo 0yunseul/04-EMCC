@@ -26,6 +26,11 @@ body {
 ul {
 	list-style-type: none;
 }
+a {
+	color : inherit;
+	text-decoration: none;
+}
+
 .d-none {
 	display : none;
 }
@@ -88,7 +93,7 @@ header{
 	text-align: center;
 	font-size: 1.5rem;
 	font-weight: 500;
-	color: var(--title-text-color);
+	color: var(--primary-color);
 	border-bottom: 1px solid var(--primary-color);
 	margin: 2.5rem 0 0 0;  /*top right bottom left 순서로 margin 적용 */
 	padding: 0 0 .5rem 0; /*top right bottom left 순서로 padding 적용 */
@@ -100,9 +105,10 @@ header{
 	color: var(--base-text-light);
 	background-color:var(--primary-color);
 	text-align : center; 
-	width: 30%; /* 1000px의 30%크기. 300px/20px= 15rem으로 렌더링*/
+	width: 17rem; /* 1000px의 30%크기. 300px/20px= 15rem으로 렌더링*/
 	margin: 0 auto;
 	padding: .5rem 0; 
+	letter-spacing: -1px;
 }
 .system-list {
 	display: flex;
@@ -142,6 +148,7 @@ header{
 	display: flex;
 	flex-direction: column;	/*coloumn 으로 되어있으면 align-items로 가운데 정렬화*/
 	align-items: center; /*aling self : 개별 정렬 속성( 하나만)*/
+	margin:  1rem 0 rem 0;
 }
 .new-item img:nth-of-type(1) {
 	width: 30rem;
@@ -155,4 +162,69 @@ header{
 	padding: .5rem 1rem;
 }
 
+/*====================aside==============사진 두개 있으면 맨앞 오는건 먼저 쓴다.=========*/
+.aside-bg {
+	min-height:300px;
+	background-image : url("../images/company.png"), url("../images/company_bg.jpg");
+	background-size: contain, cover;
+	background-repeat: no-repeat, repeat-x;
+	background-position:  right bottom, left bottom;
+}
+aside .container{
+	overflow: hidden;
+}
+aside .container .catch-title {
+	font-size: 1rem;
+	font-weight: 500;
+	color: var(--special-text-color, #193f5c);
+	margin: 3rem 0 1rem 0;
+}
+aside .container .catch-desc {
+	font-size: 1.5rem;
+	color: var(--special-text-color, #193f5c);
+}
+.w500 {
+	font-weight: 500;
+}
+.w300 {
+	font-weight: 300;
+}
+aside .container .extras {
+	margin: 3rem 0 0 0; 
+}
+/*====================extras=======================*/
+.extras{
+	background-color: var(--extras-bg-color, #f5f5f5);
+}
+.extras .container{
+	display: flex;
+	justify-content: space-between;
+}
+.contact::before{
+	content: '';
+	display: inline-block;
+	background-image: url("../images/icon_call.png");
+	width: 28px;
+	height: 28px;
+	vertical-align: sub;  /*아이콘과 num 위치설정 :vertical align*/
+}
+.contact {
+	align-self: center;
+	font-size: 1rem;
+	font-weight: 700;
+	color: var(--contact-number-color, #e86708);
+}	
+
 /*====================footer=======================*/
+footer .container {
+	text-align: center;
+	padding : 2rem 0;
+}
+footer .container h3 {
+	margin: 1rem 0;
+}	
+footer .container p:nth-of-type(3) {
+	margin: 1rem 0 0 0
+}
+
+
