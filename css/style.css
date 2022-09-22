@@ -61,10 +61,15 @@ header{
 .burger{
 	float:right;
 	right: 0;
-	top: 1rem;
+	top: 0;
+	
+}
+.slogan_text {
+	margin: 230px auto 0; 
+	width : 533px;
+	height: 243px;
 }
 
-.btn_menu
 
 
 /*====================section=======================*/
