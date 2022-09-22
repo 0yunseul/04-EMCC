@@ -4,7 +4,9 @@
 :root {
 	--base-text-color: #666;
 	--base-text-light: #fff;
+	--base-text-dark: #000;
 	--primary-color:#1e598c;
+
 }
 
 * { 
@@ -126,7 +128,7 @@ header{
 	display: none;
 	justify-content: center;
 	align-items: center;
-	flex-direction: column;  /*flex 기본정렬 : row(=행 : 수평)  > column(열: 수직)으로 바꾸면 수직 정렬 */
+	flex-direction: column;  /*flex 기본정렬 : row(=행 : 수평)  > column(열: 수직)으로 바꾸면 수직 정렬 > */
 }
 .over-title {
 	font-size: 1.5rem;
@@ -135,7 +137,22 @@ header{
 	font-size: 2rem;
 }
 
-/*====================aside=======================*/
-
+/*====================section>article : new-item=======================*/
+.new-item {
+	display: flex;
+	flex-direction: column;	/*coloumn 으로 되어있으면 align-items로 가운데 정렬화*/
+	align-items: center; /*aling self : 개별 정렬 속성( 하나만)*/
+}
+.new-item img:nth-of-type(1) {
+	width: 30rem;
+	object-fit : cover; /* 크기값에 맞게 조절 */
+}
+.new-item button:nth-of-type(1) {
+	border: 1px solid var(--base-text-dark, black);
+	border-radius: 1.5rem;
+	font-size : .8rem;
+	color: var(--base-text-dark, black);
+	padding: .5rem 1rem;
+}
 
 /*====================footer=======================*/
