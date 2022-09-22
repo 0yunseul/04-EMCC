@@ -3,6 +3,8 @@
 
 :root {
 	--base-text-color: #666;
+	--base-text-light: #fff;
+	--primary-color:#1e598c;
 }
 
 * { 
@@ -18,6 +20,9 @@ body {
 	font-size : .7rem;
 	font-weight : 400;
 	color: var(--base-text-color);
+}
+ul {
+	list-style-type: none;
 }
 .d-none {
 	display : none;
@@ -36,7 +41,7 @@ body {
 .pos-relative{
 	position:relative;
 }
-.pos.absolute{
+.pos-absolute{
 	position: absolute;
 	
 }
@@ -69,15 +74,66 @@ header{
 	width : 533px;
 	height: 243px;
 }
+/*====================section->article=======================*/
+.system-bg{
+	background-image: url("../images/system_bg.jpg");
+	background-repeat: repeat-x; 
+	background-size: cover;
+	overflow : hidden; 
+	
+}
+.title {
+	text-align: center;
+	font-size: 1.5rem;
+	font-weight: 500;
+	color: var(--title-text-color);
+	border-bottom: 1px solid var(--primary-color);
+	margin: 2.5rem 0 0 0;  /*top right bottom left 순서로 margin 적용 */
+	padding: 0 0 .5rem 0; /*top right bottom left 순서로 padding 적용 */
+}
 
+.sub-title{
+	font-size: 1rem;
+	font-weight: 500;
+	color: var(--base-text-light);
+	background-color:var(--primary-color);
+	text-align : center; 
+	width: 30%; /* 1000px의 30%크기. 300px/20px= 15rem으로 렌더링*/
+	margin: 0 auto;
+	padding: .5rem 0; 
+}
+.system-list {
+	display: flex;
+	column-gap: 1rem;
+	margin : 3rem 0;
+}
+.system-list li {
+	border-radius: 50%;
+	overflow: hidden;
+}
+.system-list li:hover .overlay{
+	display: flex; /*flex : (block)flex, inline-flex */
+}
 
+.system-list .overlay{
+	background-color: rgba(0,0,0, .3);
+	color: var(--base-text-light);
+	width: 100%;
+	height: 100%;
+}
 
-/*====================section=======================*/
-container title
-
-container sub-title
-
-container over-title
+.overlay {
+	display: none;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;  /*flex 기본정렬 : row(=행 : 수평)  > column(열: 수직)으로 바꾸면 수직 정렬 */
+}
+.over-title {
+	font-size: 1.5rem;
+}
+.over-title + .material-symbols-outlined {  /* + : 다음 형제 요소, ~: 다음 형제들 요소 */
+	font-size: 2rem;
+}
 
 /*====================aside=======================*/
 
