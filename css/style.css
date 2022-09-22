@@ -148,7 +148,7 @@ header{
 	display: flex;
 	flex-direction: column;	/*coloumn 으로 되어있으면 align-items로 가운데 정렬화*/
 	align-items: center; /*aling self : 개별 정렬 속성( 하나만)*/
-	margin:  1rem 0 rem 0;
+	margin: 1rem 0 1rem 0;
 }
 .new-item img:nth-of-type(1) {
 	width: 30rem;
