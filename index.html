@@ -61,67 +61,82 @@
 				</div>
 			</article>			
 			<article>
-				<div class="container">
+			<div class="container">
 				<h3 class = "title">생산 제품</h3>
 				<p class="sub-title">2023년 신제품, 지능형 <strong>텔레모스 시스템!</strong></p>
 				<div class="new-item pos-relative">
 					<img alt="2023신제품" src="images/product.png">
-					<button type="button" class="rounded-rect" id="detail">자세히보기</button>
-					<div class="item-detail pos-absolute">
-						<span id="close" class="pos-absolute">닫기</span>
-						<div class="detail-content">
-							<div class="img-detail">
-								<div class="big-img"></div>
-									<img src="https://picsum.photos/id/2/300" alt="picsum">
-								<ul class="small-img">
-									<li><img src="https://picsum.photos/id/1/100" alt="picsum"></li>
-									<li><img src="https://picsum.photos/id/10/100" alt="picsum"></li>
-									<li><img src="https://picsum.photos/id/100/100" alt="picsum"></li>
-								</ul>
-							</div>
-							<div class="text-detail">
-								<ul>
-									<li>제품명 : 지능형 텔레모스 시스템</li>
-									<li>출시일 : 2022.09.22</li>
-									<li> .....</li>
-								</ul>
-							</div>
+					<button type="button" class="rounded-rect" id="open">자세히보기</button>
+					<div class="item-detail pos-absolute d-none">
+						<div id="close" class="pos-absolute">&times;</div>
+						<div class="detail">
+								<div class="img-detail">
+									<div class="big-img">
+										<img src="https://picsum.photos/id/1000/3000/3000"  id="img1" alt="pics" >
+									</div>	
+										<ul class= "small-img">
+											<li><img src="https://picsum.photos/id/1/2000/2000" alt="pics"></li>
+											<li><img src="https://picsum.photos/id/10/2000/2000" alt="pics"></li>
+											<li><img src="https://picsum.photos/id/100/2000/2000" alt="pics"></li>
+										</ul>
+								</div>
+									<div class="text-detail">
+									<p>모델명 : H12345 </p>
+									<p>생산일 : 2022.09.23</p>
+									<p>책임자 : 박주영 </p>
+									<p>기능 : 정수,정화,센서알림 </p>
+									<p>컬러 : 베이지,골드,그레이</p>
+									<p>크기: 6000 x 4500 x 1200 </p>
+									<p>특징: 
+										<ul>
+											 <li>기존 모델과 다른 폼팩터 설계 </li>
+											 <li>상위 기종과 호환</li>
+										</ul>
+									</p>
+									</div>
 						</div>
-					</div>
+							<!-- /.detail -->
+					</div>	
 				</div>
-				<!-- /.new-item -->
-				<!-- <div class="carousel">  -->
-<!-- 				<div class="carousel"> -->
-<!-- 					<div class="prev"> -->
-<!-- 						<span class="material-symbols-outlined"> -->
-<!-- 							navigate_before -->
-<!-- 						</span> -->
-<!-- 					</div> -->
-<!-- 					<ul class="items-list"> -->
-<!-- 						<li> -->
-<!-- 							<img alt="2023신제품" src="images/product.png"> -->
-<!-- 							<button type="button" class="rounded-rect">자세히보기</button> -->
-<!-- 						</li> -->
-<!-- 						<li> -->
-<!-- 							<img alt="2023신제품" src="images/product.png"> -->
-<!-- 							<button type="button" class="rounded-rect">자세히보기</button> -->
-<!-- 						</li> -->
-<!-- 						<li> -->
-<!-- 							<img alt="2023신제품" src="images/product.png"> -->
-<!-- 							<button type="button" class="rounded-rect">자세히보기</button> -->
-<!-- 						</li> -->
-<!-- 					</ul> -->
-<!-- 					<div class="next"> -->
-<!-- 						<span class="material-symbols-outlined"> -->
-<!-- 							navigate_next -->
-<!-- 						</span> -->
-<!-- 					</div> -->
-<!-- 				</div> -->
-				<!-- /.carousel -->
+				</div>	
+					
+					<script>
+					</script>		
+		
 				
-				</div>
-			</article>
-		</section>
+			<!-- /.new-item -->
+				<!-- <div class="carousel">  -->
+ <!-- 				<div class="carousel"> -->
+ <!-- 					<div class="prev"> -->
+ <!-- 						<span class="material-symbols-outlined"> -->
+ <!-- 							navigate_before -->
+ <!-- 						</span> -->
+ <!-- 					</div> -->
+ <!-- 					<ul class="items-list"> -->
+ <!-- 						<li> -->
+ <!-- 							<img alt="2023신제품" src="images/product.png"> -->
+ <!-- 							<button type="button" class="rounded-rect">자세히보기</button> -->
+ <!-- 						</li> -->
+ <!-- 						<li> -->
+ <!-- 							<img alt="2023신제품" src="images/product.png"> -->
+ <!-- 							<button type="button" class="rounded-rect">자세히보기</button> -->
+ <!-- 						</li> -->
+ <!-- 						<li> -->
+ <!-- 							<img alt="2023신제품" src="images/product.png"> -->
+ <!-- 							<button type="button" class="rounded-rect">자세히보기</button> -->
+ <!-- 						</li> -->
+ <!-- 					</ul> -->
+ <!-- 					<div class="next"> -->
+ <!-- 						<span class="material-symbols-outlined"> -->
+ <!-- 							navigate_next -->
+<!-- 						</span> -->
+<!-- 					</div> -->
+		 <!-- 				</div> -->
+ 				<!-- /.carousel -->
+				
+				</article>
+				</section>
+	
 		<aside class="aside-bg">
 			<h2 class="d-none">이미그룹 캐치프레이즈</h2>  <!-- catchphrase vs slogan -->
 			<div class="container">
@@ -149,6 +164,42 @@
 				<p><strong>emcc</strong> &copy; 2022.all rights reserved</p>
 			</div>		
 		</footer>
-		<script src="script/main.js"></script>
+		<script>
+					window.addEventListener("DOMContentLoaded",function(){
+						
+						const closeBT = document.querySelector("#close");
+						const openBT = document.querySelector("#open");
+						const itemDIV = document.querySelector(".item-detail");
+					
+						
+						openBT.addEventListener("click", function(){
+							itemDIV.classList.remove("d-none");
+						});
+						closeBT.addEventListener("click", function(){
+							itemDIV.classList.add("d-none");
+						});
+				
+						const smallIMG = document.querySelectorAll(".small-img li");	//NodeList로 반환
+						const img1= document.querySelector("#img1");
+					
+						smallIMG[0].addEventListener("mouseenter", function(){ 
+							img1.setAttribute("src","https://picsum.photos/id/1/2000/2000")
+						})				
+						
+						smallIMG[1].addEventListener("mouseenter", function(){
+							img1.setAttribute("src","https://picsum.photos/id/10/2000/2000")
+						})				
+						
+						smallIMG[2].addEventListener("mouseenter", function(){
+							img1.setAttribute("src","https://picsum.photos/id/100/2000/2000")
+						})				
+						/* smallIMG.forEach(function(){ 
+							console.log("클릭했습니다")
+						})	*/				
+					
+					})
+					
+		</script>
+	<!-- <script src="script/main.js"></script> -->	
 	</body>
 </html>

@@ -150,10 +150,11 @@ header{
 	align-items: center; /*aling self : 개별 정렬 속성( 하나만)*/
 	margin: 1rem 0 1rem 0;
 }
-.new-item img:nth-of-type(1) {
+.new-item >img:nth-of-type(1) {
 	width: 30rem;
-	object-fit : cover; /* 크기값에 맞게 조절 */
+	object-fit: cover; /* 크기값에 맞게 조절 */
 }
+
 .new-item button:nth-of-type(1) {
 	border: 1px solid var(--base-text-dark, black);
 	border-radius: 1.5rem;
@@ -161,20 +162,87 @@ header{
 	color: var(--base-text-dark, black);
 	padding: .5rem 1rem;
 }
+
 .item-detail {
-	width: 100%;
-	height: 100%;
-	background-color: white;
 	top: 0;
 	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color:var(--base-text-light, crimson);
+	overflow: hidden;
+
+}
+
+.detail{
+	display: flex;
+	column-gap: .5rem;
+}
+
+.img-detail {
+	flex:4;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	height: 400px;
+	row-gap :.5rem;
+}
+.img-detail img{
+	width: 100%;
+	object-fit :cover; 
+}
+.big-img {
+	flex: 7;
 	overflow: hidden;
 }
-#close{
-	right: 5%;
-	top : 5%;
-	background-color: var(--close-btn-color,#000);
-	color: var(--base-text-light,white);
-	padding: .5rem 1rem;
+.small-img {
+	flex: 3;
+	overflow: hidden;
+	display: flex;
+	column-gap: .5rem;
+}
+.small-img li{
+	flex: 1;
+	overflow: hidden;	
+	background-color: var(--text-color-dark, #000)
+	
+}
+.small-img li img{
+	border: 10px solid transparent;
+	box-sizing: border-box;
+	opacity: .5;
+}
+
+.small-img li:hover img{
+	border: 2px solid dodgerblue;
+	/*    : 1;*/
+}
+.text-detail{
+	flex: 6;
+	background-color: var(--gray-color, #efefef);
+}
+.text-detail p{
+	margin : 1rem
+}
+.text-detail ul{
+	list-style-type: square; /*목록기호 : 사각형 */
+	list-style-position: inside; /*목록기호 위치*/    
+	/*list-style : inside square; */
+	margin : 0 0 0 3rem;
+}
+
+
+#close {
+	position: absolute;
+	right: 2%;
+	top:2%;
+	background-color: var(--base-text-dark, black);
+	color : var(--base-text-light, white);
+	font-size: 2rem;
+	width: 64px;
+	height: 64px;
+	border-radius : 50%;
+	text-align: center;
+	
 }
 
 /*====================aside==============사진 두개 있으면 맨앞 오는건 먼저 쓴다.=========*/
