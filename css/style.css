@@ -52,13 +52,16 @@ a {
 	position: absolute;
 	
 }
+.pos-fixed {
+	position:fixed;
+}
 button{
 	background-color:transparent;
 	border: 0;
 	outline: none; 
 }
 /*====================header=======================*/
-header{
+header.main-header{
 	background-image: url("../images/visual_bg.jpg");
 	background-repeat: no-repeat;
 	background-position: 50% 50%;
@@ -114,6 +117,7 @@ header{
 	display: flex;
 	column-gap: 1rem;
 	margin : 3rem 0;
+	justify-content: center;
 }
 .system-list li {
 	border-radius: 50%;
@@ -231,7 +235,7 @@ header{
 }
 
 
-#close {
+#close {  /*자세히보기 닫기*/
 	position: absolute;
 	right: 2%;
 	top:2%;
@@ -245,6 +249,45 @@ header{
 	
 }
 
+/*==========sidePanel================*/
+#sidePanel.collapsed {
+	right: -280px;
+}
+#sidePanel{
+	width: 280px;
+	height: 100%;
+	right: 0;
+	top:0;
+	color: var(--text-color-light,white);
+	transition: all .3s;
+}
+#sidePanel .container{
+	background-color: dodgerblue;
+	height: 100%
+	
+}
+.side-header{
+	padding: 0 0 0 1rem;
+	text-transform: uppercase;
+}
+.side-header h2{
+	font-size: 2rem;
+}
+.side-header h2 + p {
+	font-size: 1.25rem;
+}
+#closePanel {
+	position: absolute;
+	right: calc(14rem - 25px);
+	top: calc(50% - 25px); 
+	width: 50px;
+	height: 50px;
+	color: var(--base-color-dark, black);
+	background-color: var(--base-color-light, white);
+	box-shadow:.2rem .2rem 10px 0 rgba(0,0,0, .4) ;
+	border-radius: 50%;
+	font-size : 1.5rem;
+}
 /*====================aside==============사진 두개 있으면 맨앞 오는건 먼저 쓴다.=========*/
 .aside-bg {
 	min-height:300px;

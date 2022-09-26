@@ -15,7 +15,7 @@
 	</head>
 	<body>
 		<h1 class="d-none">EMCC (주)이미그룹</h1>
-		<header>
+		<header class="main-header">
 			<div class="container pos-relative">
 				<div class="logo">
 					<a href="#"> <img src="images/gnb_logo.png" alt="emcc">
@@ -92,18 +92,13 @@
 											 <li>기존 모델과 다른 폼팩터 설계 </li>
 											 <li>상위 기종과 호환</li>
 										</ul>
-									</p>
 									</div>
 						</div>
 							<!-- /.detail -->
 					</div>	
 				</div>
 				</div>	
-					
-					<script>
-					</script>		
-		
-				
+
 			<!-- /.new-item -->
 				<!-- <div class="carousel">  -->
  <!-- 				<div class="carousel"> -->
@@ -136,7 +131,32 @@
 				
 				</article>
 				</section>
-	
+		<div id="sidePanel" class="pos-fixed collapsed">
+			<div class="container">
+				<header class="side-header">
+				<h2>EMCC로고</h2>			
+				<p>(주)이미그룹</p>
+				<nav class="side-nav">
+					<ul id="snb">
+						<li><a href="#">home</a></li>
+						<li><a href="#">product</a></li>
+						<li><a href="#">customer</a></li>
+						<li><a href="#">contact</a></li>
+						<li><a href="#">about</a></li>
+					</ul>
+				</nav>
+				</header>
+				<section>
+					<a href="#">id/pw찾기</a> | <a href="#">고객센터</a>
+				</section>
+				<aside>
+					<button id="closePanel">&lt;</button>
+				</aside>
+				<footer>
+					&copy; emcc.2022.<br>by <a href="mailto:hanul7797@naver.com">hanul</a>
+				</footer>
+			</div> <!-- container -->
+		</div> <!-- sidePanel -->
 		<aside class="aside-bg">
 			<h2 class="d-none">이미그룹 캐치프레이즈</h2>  <!-- catchphrase vs slogan -->
 			<div class="container">
@@ -144,6 +164,8 @@
 				<p class="catch-desc"><span class="w500">사람과 자연 모두가 행복한 세상,</span><br><span class="w300">이미가 만들어 가고자 하는 미래입니다.</span></p>
 			</div>
 		</aside>
+		
+		
 		<div class="extras">
 			<div class="container">
 					<div class="contact">
@@ -192,7 +214,22 @@
 						
 						smallIMG[2].addEventListener("mouseenter", function(){
 							img1.setAttribute("src","https://picsum.photos/id/100/2000/2000")
-						})				
+						})		
+						/*side panel*/
+						
+						//const openSidePanel = document.querySelector(".burger");
+						const toggleSidePanel = document.querySelector("#closePanel");
+						const sidePanel = document.querySelector("#sidePanel");
+						
+						toggleSidePanel.addEventListener("click",function(){
+							if(sidePanel.classList.contains("collapsed")){
+								sidePanel.classList.remove("collapsed");
+								toggleSidePanel.innerHTML ="&gt";
+							}else {
+								sidePanel.classList.add("collapsed");
+								toggleSidePanel.innerHTML ="&lt;";
+						}
+						});
 						/* smallIMG.forEach(function(){ 
 							console.log("클릭했습니다")
 						})	*/				

@@ -39,7 +39,18 @@ $(function() {
 						
 						smallIMG[2].addEventListener("mouseenter", function(){
 							img1.setAttribute("src","https://picsum.photos/id/100/2000/2000")
-						})				
+						})		
+						const toggleSidePanel = document.querySelector("#closePanel");
+						const sidePanel = document.querySelector("#sidePanel");
+						
+						toggleSidePanel.addEventListener("click",function(){
+							if(sidePanel.classList.contains("collapsed")){
+								sidePanel.classList.remove("collapsed")
+							}else {
+								sidePanel.classList.add("collapsed")
+						}
+						});
+					
 						/* smallIMG.forEach(function(){ 
 							console.log("클릭했습니다")
 						})	*/				
