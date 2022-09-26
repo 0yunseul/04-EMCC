@@ -40,14 +40,17 @@ $(function() {
 						smallIMG[2].addEventListener("mouseenter", function(){
 							img1.setAttribute("src","https://picsum.photos/id/100/2000/2000")
 						})		
-						const toggleSidePanel = document.querySelector("#closePanel");
-						const sidePanel = document.querySelector("#sidePanel");
+						const toggleSidePanel = $("#closePanel");
+						const sidePanel =$("#sidePanel");
+						const screen = $(".screen")
 						
 						toggleSidePanel.addEventListener("click",function(){
-							if(sidePanel.classList.contains("collapsed")){
-								sidePanel.classList.remove("collapsed")
+							if(sidePanel.hasClass("collapsed")){
+								sidePanel.removeClass("collapsed");
+								screen.removeClass("d-none");
 							}else {
-								sidePanel.classList.add("collapsed")
+								sidePanel.addClass("collapsed");
+								screen.addClass("d-none");
 						}
 						});
 					

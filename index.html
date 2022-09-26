@@ -15,6 +15,7 @@
 	</head>
 	<body>
 		<h1 class="d-none">EMCC (주)이미그룹</h1>
+		<div class="screen d-none"></div>
 		<header class="main-header">
 			<div class="container pos-relative">
 				<div class="logo">
@@ -87,11 +88,11 @@
 									<p>기능 : 정수,정화,센서알림 </p>
 									<p>컬러 : 베이지,골드,그레이</p>
 									<p>크기: 6000 x 4500 x 1200 </p>
-									<p>특징: 
-										<ul>
-											 <li>기존 모델과 다른 폼팩터 설계 </li>
-											 <li>상위 기종과 호환</li>
-										</ul>
+									<p>특징:</p>	
+									<ul>
+										 <li>기존 모델과 다른 폼팩터 설계 </li>
+										 <li>상위 기종과 호환</li>
+									</ul>
 									</div>
 						</div>
 							<!-- /.detail -->
@@ -220,14 +221,17 @@
 						//const openSidePanel = document.querySelector(".burger");
 						const toggleSidePanel = document.querySelector("#closePanel");
 						const sidePanel = document.querySelector("#sidePanel");
+						const screen = document.querySelector(".screen")
 						
 						toggleSidePanel.addEventListener("click",function(){
 							if(sidePanel.classList.contains("collapsed")){
 								sidePanel.classList.remove("collapsed");
 								toggleSidePanel.innerHTML ="&gt";
+								screen.classList.remove("d-none");
 							}else {
 								sidePanel.classList.add("collapsed");
 								toggleSidePanel.innerHTML ="&lt;";
+								screen.classList.add("d-none");
 						}
 						});
 						/* smallIMG.forEach(function(){ 
